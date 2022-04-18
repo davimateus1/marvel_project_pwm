@@ -2,10 +2,9 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   font-family: Poppins, sans-serif;
-  color: #ec1d24;
   background-color: #060d15;
   width: 100vw;
-  height: 20vh;
+  height: 15vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,8 +12,9 @@ export const Container = styled.div`
 `;
 
 export const Name = styled.h1`
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.2rem;
+  color: #ec1d24;
 `;
 
 export const PersonsContainer = styled.div`
@@ -32,13 +32,13 @@ export const Person = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  p {
+  a {
     color: white;
     margin: 0.3rem;
     transition: all 0.5s;
   }
-  p:hover{
-    color: #E8AA3B;
+  a:hover {
+    color: #e8aa3b;
   }
 `;
 
@@ -55,7 +55,7 @@ export const Links = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  p {
+  a {
     cursor: pointer;
   }
 `;

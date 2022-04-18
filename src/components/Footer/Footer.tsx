@@ -6,37 +6,35 @@ import {
   Person,
   PersonsContainer,
 } from "./styles";
+import { Fade } from "react-reveal";
+import { Persons } from "../../assets/data";
 import { AiFillInstagram, AiFillLinkedin, AiFillGithub } from "react-icons/ai";
+
 export const Footer = () => {
   return (
     <Container>
       <PersonsContainer>
-        <Person>
-          <Name>Ronny Lima</Name>
-          <Links>
-            <p><AiFillInstagram/></p>
-            <p><AiFillLinkedin/></p>
-            <p><AiFillGithub /></p>
-          </Links>
-        </Person>
-        <Divider />
-        <Person>
-          <Name>Davi Mateus</Name>
-          <Links>
-            <p><AiFillInstagram/></p>
-            <p><AiFillLinkedin/></p>
-            <p><AiFillGithub /></p>
-          </Links>
-        </Person>
-        <Divider />
-        <Person>
-          <Name>João Vitor M.</Name>
-          <Links>
-            <p><AiFillInstagram/></p>
-            <p><AiFillLinkedin/></p>
-            <p><AiFillGithub /></p>
-          </Links>
-        </Person>
+        {Persons.map((person, index) => (
+          <>
+            <Fade>
+              <Person>
+                <Name>{person.name}</Name>
+                <Links>
+                  <a href={person.instagram} target="_blank" rel="noreferrer">
+                    <AiFillInstagram />
+                  </a>
+                  <a href={person.linkedin} target="_blank" rel="noreferrer">
+                    <AiFillLinkedin />
+                  </a>
+                  <a href={person.github} target="_blank" rel="noreferrer">
+                    <AiFillGithub />
+                  </a>
+                </Links>
+              </Person>
+            </Fade>
+            {index < 2 ? <Divider /> : ""}
+          </>
+        ))}
       </PersonsContainer>
     </Container>
   );

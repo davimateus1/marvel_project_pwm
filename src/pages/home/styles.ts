@@ -2,11 +2,11 @@ import StarkTower from "../../assets/img/StarkTower.jpg";
 import styled, { keyframes } from "styled-components";
 
 export const Container = styled.div`
-  font-family: Marvel, sans-serif;
+  font-family: Bangers, sans-serif;
   background-image: url(${StarkTower});
   background-size: cover;
   background-repeat: no-repeat;
-  height: 70vh;
+  height: 75vh;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -17,8 +17,11 @@ export const Title = styled.h1`
   padding: 0.5rem;
   border-radius: 20px;
   font-weight: bold;
-  background-color: #060d15;
+  background-color: rgba(6, 13, 21, 0.6);
+  border: 1px solid #060D15;
   width: 25rem;
+  min-height: 17rem;
+  height: auto;
   font-size: 5rem;
   text-align: center;
   span {
@@ -26,8 +29,14 @@ export const Title = styled.h1`
     font-weight: 900;
     background-color: #ec1d24;
     color: white;
-    padding: 0rem;
+    padding: 0.8rem;
   }
+`;
+
+export const TextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const effect = keyframes`

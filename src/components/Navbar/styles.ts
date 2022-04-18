@@ -25,10 +25,10 @@ export const Links = styled.ul`
     cursor: pointer;
     margin-left:2rem;
     transition: all 0.5s;
-    border-bottom: 1.5px solid transparent;
+    border-bottom: 2px solid transparent;
   }
   li:hover {
     color: #E8AA3B;
-    border-bottom: 1.5px solid #772720;
+    border-bottom: 2px solid #772720;
   }
 `;
