@@ -5,14 +5,14 @@ export const Container = styled.div`
   color: #EC1D24;
   background-color: #060D15;
   width: 100vw;
-  height: 10vh;
+  height: 7vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
 `;
 
 export const Logo = styled.img`
-  width: 10%;
+  width: 7%;
   margin-left: 2rem;
 `;
 

@@ -1,13 +1,17 @@
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Homepage } from "./pages/home";
-import { Navbar } from "./components/Navbar";
-import { Footer } from "./components/Footer";
+import { OptionsPage } from "./pages/OptionsPage";
 
 const App = () => {
   return (
     <>
-      <Navbar />
-      <Homepage />
-      <Footer />
+      <Router>
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/options" element={<OptionsPage />} />
+          {/* <Route element={<ErrorPage />} path="/*" /> */}
+        </Routes>
+      </Router>
     </>
   );
 };
