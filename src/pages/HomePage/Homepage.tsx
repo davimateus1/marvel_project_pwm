@@ -19,7 +19,7 @@ export const Homepage = () => {
             <Typing.Delay ms={1000} />
           </Zoom>
         </Tilt>
-          <Button titleText="Explore o mundo marvel" redirect="/options"/>
+        <Button titleText="Explore o mundo marvel" redirect="/options" />
       </TextContainer>
       <Image src={IronMan} alt="IronMan" />
     </Container>

@@ -16,6 +16,7 @@ type CardsOptionsProps = {
   image: string;
   title: string;
   color: string;
+  link: string;
 };
 
 export const Persons: PersonsProps[] = [
@@ -44,30 +45,36 @@ export const CardsOptions: CardsOptionsProps[] = [
     image: Characters,
     title: "Personagens",
     color: "rgba(90, 180, 7, 0.7)",
+    link: "/characters",
   },
   {
     image: Stories,
     title: "Filmes",
     color: "rgba(236, 29, 36, 0.7)",
+    link: "/options",
   },
   {
     image: Creators,
     title: "Criadores",
     color: "rgba(30, 30, 30, 0.7)",
+    link: "/options",
   },
   {
     image: Comics,
     title: "Quadrinhos",
     color: "rgba(255, 255, 0, 0.7)",
+    link: "/options",
   },
   {
     image: Events,
     title: "Eventos",
     color: "rgba(253, 122, 34, 0.7)",
+    link: "/options",
   },
   {
     image: Series,
     title: "Séries",
     color: "rgba(255, 255, 255, 0.7)",
+    link: "/options",
   },
 ];
