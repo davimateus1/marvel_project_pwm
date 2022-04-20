@@ -28,15 +28,15 @@ export const Persons: PersonsProps[] = [
   },
   {
     name: "Ronny Lima",
-    linkedin: "",
-    github: "",
-    instagram: "",
+    linkedin: "https://www.linkedin.com/in/ronny-lima-ribeiro-da-silva/",
+    github: "https://github.com/ronnylrsd",
+    instagram: "https://www.instagram.com/ronny.ribeiro1604/",
   },
   {
     name: "João Vitor M.",
-    linkedin: "",
-    github: "",
-    instagram: "",
+    linkedin: "https://www.linkedin.com/in/joão-vitor-machado-b23a7820b/",
+    github: "https://github.com/joovitor12",
+    instagram: "https://www.instagram.com/jv__machado/",
   },
 ];
 

@@ -17,6 +17,7 @@ export const Logo = styled.img`
 `;
 
 export const Links = styled.ul`
+  flex-direction: row;
   list-style: none;
   display: flex;
   font-weight: 400;
@@ -26,19 +27,11 @@ export const Links = styled.ul`
   a {
     text-decoration: none;
     color: #ec1d24;
-  }
-  svg {
-    color: #fff;
-    font-size: 2rem;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    border: none;
+    font-size: 1.2rem;
   }
   li {
     color: #ec1d24;
     cursor: pointer;
-    margin-left: 2rem;
     transition: all 0.5s;
     border-bottom: 2px solid transparent;
   }
