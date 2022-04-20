@@ -23,13 +23,12 @@ export const Container = styled.div`
   }
 
   ::-webkit-scrollbar-thumb {
-    background-color: #060D15;
+    background-color: #060d15;
     border-radius: 10px;
   }
 `;
 
 export const CharacterContainer = styled.div<CharacterContainerProps>`
-  cursor: pointer;
   border-radius: 20px;
   margin: 1.3rem;
   background-image: url(${(props) => (props.image ? props.image : "")});
@@ -52,8 +51,23 @@ export const Text = styled.h1`
   position: relative;
   border-radius: 10px;
   padding: 0.5rem;
-  top: -1rem;
+  top: 0;
   width: 75%;
-  font-size: 2rem;
+  font-size: 1.4rem;
   background-color: rgba(90, 180, 7, 0.5);
+`;
+
+export const InfosContainer = styled.div`
+  position: relative;
+  border-radius: 10px;
+  padding: 0.5rem;
+  width: 75%;
+  top: 8.5rem;
+  border: 1px solid black;
+  background-color: rgba(0, 0, 0, 0.3);
+  p {
+    line-height: 0.1px;
+    color: white;
+    font-size: 1.15rem;
+  }
 `;

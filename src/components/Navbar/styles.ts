@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   font-family: Poppins, sans-serif;
-  color: #ec1d24;
   background-color: #060d15;
   width: 100vw;
   height: 7vh;
@@ -22,7 +21,22 @@ export const Links = styled.ul`
   display: flex;
   font-weight: 400;
   margin-right: 2rem;
+  justify-content: center;
+  align-items: center;
+  a {
+    text-decoration: none;
+    color: #ec1d24;
+  }
+  svg {
+    color: #fff;
+    font-size: 2rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border: none;
+  }
   li {
+    color: #ec1d24;
     cursor: pointer;
     margin-left: 2rem;
     transition: all 0.5s;
