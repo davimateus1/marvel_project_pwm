@@ -13,8 +13,8 @@ import { useEffect } from "react";
 const App = () => {
   useEffect(() => {
     window.addEventListener("load", () => {
-      if (window.location.protocol === "https") {
-        window.location.protocol = "http";
+      if (window.location.protocol === "https:") {
+        window.location.protocol = "http:";
       }
     });
   }, []);
