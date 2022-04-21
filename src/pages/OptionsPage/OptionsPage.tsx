@@ -4,10 +4,9 @@ import { CardsSpace, Container, TitlePage } from "./styles";
 import { useEffect } from "react";
 
 export const OptionsPage = () => {
-
   useEffect(() => {
     document.title = "Marvel: Destinos";
-  })
+  });
 
   return (
     <Container>

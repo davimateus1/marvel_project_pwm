@@ -1,17 +1,28 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { CharactersPage } from "./pages/CharactersPage";
-import { Homepage } from "./pages/HomePage";
+import { HomePage } from "./pages/HomePage";
 import { OptionsPage } from "./pages/OptionsPage";
+import { ComicsPage } from "./pages/ComicsPage";
+import { SeriesPage } from "./pages/SeriesPage";
+import { EventsPage } from "./pages/EventsPage";
+import { CreatorsPage } from "./pages/CreatorsPage";
+import { StoriesPage } from "./pages/StoriesPage";
+import { ErrorPage } from "./pages/ErrorPage";
 
 const App = () => {
   return (
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<Homepage />} />
+          <Route path="/" element={<HomePage />} />
           <Route path="/options" element={<OptionsPage />} />
           <Route path="/characters" element={<CharactersPage />} />
-          {/* <Route element={<ErrorPage />} path="/*" /> */}
+          <Route path="/comics" element={<ComicsPage />} />
+          <Route path="/series" element={<SeriesPage />} />
+          <Route path="/events" element={<EventsPage />} />
+          <Route path="/creators" element={<CreatorsPage />} />
+          <Route path="/stories" element={<StoriesPage />} />
+          <Route path="/*" element={<ErrorPage />} />
         </Routes>
       </Router>
     </>

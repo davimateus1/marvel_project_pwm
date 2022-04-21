@@ -1,9 +1,5 @@
 import styled from "styled-components";
 
-type CharacterContainerProps = {
-  image: string;
-};
-
 export const Container = styled.div`
   font-family: Bangers, sans-serif;
   width: 100vw;
@@ -13,7 +9,7 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-color: rgba(90, 180, 7, 1);
+  background-color: rgba(255, 1, 23, 1);
   -webkit-box-shadow: inset -1px 0px 16px 14px rgba(0, 0, 0, 0.57);
   box-shadow: inset -1px 0px 16px 14px rgba(0, 0, 0, 0.57);
   overflow-y: scroll;
@@ -28,16 +24,14 @@ export const Container = styled.div`
   }
 `;
 
-export const CharacterContainer = styled.div<CharacterContainerProps>`
+export const CharacterContainer = styled.div`
   border-radius: 20px;
   border: 1px solid black;
   margin: 1.3rem;
-  background-image: url(${(props) => (props.image ? props.image : "")});
-  -webkit-box-shadow: inset 1px -50px 40px 5px #000000;
-  box-shadow: inset 1px -50px 40px 5px #000000;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-color: rgba(255, 47, 69, 0.7);
+  border-radius: 1px solid black;
+  -webkit-box-shadow: inset 0px 0px 34px 9px #000000;
+  box-shadow: inset 0px 0px 34px 9px #000000;
   width: 20rem;
   height: 20rem;
   flex-direction: column;
@@ -54,11 +48,12 @@ export const Text = styled.h1`
   padding: 0.5rem;
   top: 0;
   width: 80%;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  background-color: rgba(90, 180, 7, 0.5);
+  background-color: rgba(255, 103, 118, 0.3);
+  border: 1px solid black;
 `;
 
 export const InfosContainer = styled.div`
@@ -66,12 +61,12 @@ export const InfosContainer = styled.div`
   border-radius: 10px;
   padding: 0.5rem;
   width: 75%;
-  top: 8.5rem;
+  height: 13.2rem;
   border: 1px solid black;
-  background-color: rgba(90, 180, 7, 0.55);
+  background-color: rgba(255, 103, 118, 0.3);
   p {
-    line-height: 0.1px;
+    line-height: 1rem;
     color: black;
-    font-size: 1.15rem;
+    font-size: 1.3rem;
   }
 `;

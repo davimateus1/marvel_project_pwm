@@ -67,7 +67,7 @@ export const ButtonStyle = styled.button`
   }
 
   color: white;
-  transform: translateY(-6px);
+  transform: translateY(-50px);
 
   :hover::before,
   :focus::before {

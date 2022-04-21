@@ -13,7 +13,7 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-color: rgba(90, 180, 7, 1);
+  background-color: rgba(255, 255, 0, 1);
   -webkit-box-shadow: inset -1px 0px 16px 14px rgba(0, 0, 0, 0.57);
   box-shadow: inset -1px 0px 16px 14px rgba(0, 0, 0, 0.57);
   overflow-y: scroll;
@@ -47,7 +47,7 @@ export const CharacterContainer = styled.div<CharacterContainerProps>`
 `;
 
 export const Text = styled.h1`
-  -webkit-text-stroke-width: 0.03px;
+  -webkit-text-stroke-width: 0.01px;
   -webkit-text-stroke-color: white;
   position: relative;
   border-radius: 10px;
@@ -58,7 +58,7 @@ export const Text = styled.h1`
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  background-color: rgba(90, 180, 7, 0.5);
+  background-color: rgba(255, 255, 0, 0.5);
 `;
 
 export const InfosContainer = styled.div`
@@ -68,7 +68,7 @@ export const InfosContainer = styled.div`
   width: 75%;
   top: 8.5rem;
   border: 1px solid black;
-  background-color: rgba(90, 180, 7, 0.55);
+  background-color: rgba(255, 255, 0, 0.55);
   p {
     line-height: 0.1px;
     color: black;

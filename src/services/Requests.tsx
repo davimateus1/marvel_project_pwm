@@ -17,3 +17,58 @@ export const CharactersRequest = async () => {
     console.log(err);
   }
 };
+
+export const ComicsRequest = async () => {
+  try {
+    const response = await axios.get(
+      `http://gateway.marvel.com/v1/public/comics?ts=${time}&apikey=${publicKey}&hash=${hash}`
+    );
+    return response.data.data.results;
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+export const SeriesRequest = async () => {
+  try {
+    const response = await axios.get(
+      `http://gateway.marvel.com/v1/public/series?ts=${time}&apikey=${publicKey}&hash=${hash}`
+    );
+    return response.data.data.results;
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+export const EventsRequest = async () => {
+  try {
+    const response = await axios.get(
+      `http://gateway.marvel.com/v1/public/events?ts=${time}&apikey=${publicKey}&hash=${hash}`
+    );
+    return response.data.data.results;
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+export const CreatorsRequest = async () => {
+  try {
+    const response = await axios.get(
+      `http://gateway.marvel.com/v1/public/creators?ts=${time}&apikey=${publicKey}&hash=${hash}`
+    );
+    return response.data.data.results;
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+export const StoriesRequest = async () => {
+  try {
+    const response = await axios.get(
+      `http://gateway.marvel.com/v1/public/stories?ts=${time}&apikey=${publicKey}&hash=${hash}`
+    );
+    return response.data.data.results;
+  } catch (err) {
+    console.log(err);
+  }
+};

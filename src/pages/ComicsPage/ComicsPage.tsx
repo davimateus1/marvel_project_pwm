@@ -1,29 +1,29 @@
 import { useEffect, useState } from "react";
 import { Footer } from "../../components/Footer";
 import { Navbar } from "../../components/Navbar";
-import { CharactersRequest } from "../../services";
+import { ComicsRequest } from "../../services";
 import { CharacterContainer, Container, InfosContainer, Text } from "./styles";
 import Tilt from "react-tilt";
 import { Fade } from "react-reveal";
 
 import { Loading } from "../../components/Loading";
 
-export const CharactersPage = () => {
-  const [charactersData, setCharactersData] = useState([]);
+export const ComicsPage = () => {
+  const [comicsData, setComicsData] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const getCharacters = async () => {
-    const characters = await CharactersRequest();
+  const getComics = async () => {
+    const comics = await ComicsRequest();
 
-    if (characters) {
-      setCharactersData(characters);
+    if (comics) {
+      setComicsData(comics);
       setLoading(false);
     }
   };
 
   useEffect(() => {
-    document.title = "Marvel: Personagens";
-    getCharacters();
+    document.title = "Marvel: Quadrinhos";
+    getComics();
   }, []);
 
   return (
@@ -33,37 +33,29 @@ export const CharactersPage = () => {
         {loading ? (
           <Loading type="spinningBubbles" color="black" />
         ) : (
-          charactersData.map((character: any, index: number): any => (
+          comicsData.map((comic: any, index: number): any => (
             <Fade left key={index}>
               <Tilt options={{ max: 8, speed: 800, scale: 1.01 }}>
                 <CharacterContainer
-                  image={`${character.thumbnail.path}.${character.thumbnail.extension}`}
+                  image={`${comic.thumbnail.path}.${comic.thumbnail.extension}`}
                 >
-                  <Text>{character.name}</Text>
+                  <Text>{comic.title}</Text>
                   <InfosContainer>
                     <p>
-                      Séries:{" "}
-                      {character.series.available === 0
-                        ? "confidencial"
-                        : character.series.available}
-                    </p>
-                    <p>
                       Histórias:{" "}
-                      {character.stories.available === 0
+                      {comic.stories.available === 0
                         ? "confidencial"
-                        : character.stories.available}
+                        : comic.stories.available}
                     </p>
                     <p>
-                      Eventos:{" "}
-                      {character.events.available === 0
+                      Variantes:{" "}
+                      {comic.variants.length === 0
                         ? "confidencial"
-                        : character.events.available}
+                        : comic.variants.length}
                     </p>
                     <p>
-                      Quadrinhos:{" "}
-                      {character.comics.available === 0
-                        ? "confidencial"
-                        : character.comics.available}
+                      Quantidade de Páginas:{" "}
+                      {comic.pageCount === 0 ? "confidencial" : comic.pageCount}
                     </p>
                   </InfosContainer>
                 </CharacterContainer>
