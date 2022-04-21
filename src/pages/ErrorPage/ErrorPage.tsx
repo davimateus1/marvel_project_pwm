@@ -7,7 +7,7 @@ import { useEffect } from "react";
 
 export const ErrorPage = () => {
   useEffect(() => {
-    document.title = "Marvel: Inicio";
+    document.title = "Marvel: Erro 404 :(";
   });
   return (
     <Container>
