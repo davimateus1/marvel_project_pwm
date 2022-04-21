@@ -5,7 +5,7 @@ import { Zoom } from "react-reveal";
 import { Button } from "../../components/Button";
 import { useEffect } from "react";
 
-export const HomePage = () => {
+export const Homepage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
     document.title = "Marvel: Inicio";
@@ -27,4 +27,3 @@ export const HomePage = () => {
     </Container>
   );
 };
-
