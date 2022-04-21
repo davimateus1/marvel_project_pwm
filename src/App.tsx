@@ -8,8 +8,17 @@ import { CreatorsPage } from "./pages/CreatorsPage";
 import { StoriesPage } from "./pages/StoriesPage";
 import { ErrorPage } from "./pages/ErrorPage";
 import { Home } from "./pages/Home";
+import { useEffect } from "react";
 
 const App = () => {
+  useEffect(() => {
+    window.addEventListener("load", () => {
+      if (window.location.protocol === "https") {
+        window.location.protocol = "http";
+      }
+    });
+  }, []);
+
   return (
     <Router>
       <Routes>
