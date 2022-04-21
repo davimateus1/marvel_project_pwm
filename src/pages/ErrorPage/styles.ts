@@ -10,6 +10,13 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+
+  @media (max-width: 825px) {
+    flex-direction: column;
+    height: 100vh;
+    background-color: #060d15;
+    background-image: none;
+  }
 `;
 
 export const Title = styled.h1`
@@ -27,6 +34,12 @@ export const Title = styled.h1`
   height: auto;
   font-size: 5rem;
   text-align: center;
+
+  @media (max-width: 825px) {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid #060d15;
+    width: 95%;
+  }
 `;
 
 export const TextContainer = styled.div`
@@ -50,6 +63,9 @@ export const Image = styled.img`
   border-radius: 40%;
   filter: drop-shadow(5px 5px 5px black);
   animation: ${effect} 5s linear infinite;
+  @media (max-width: 825px) {
+    display: none;
+  }
 `;
 
 export const Wrap = styled.div`

@@ -8,8 +8,17 @@ import { Fade } from "react-reveal";
 
 import { Loading } from "../../components/Loading";
 
+type Character = {
+  image: string;
+  name: string;
+  series: { available: number };
+  stories: { available: number };
+  events: { available: number };
+  comics: { available: number };
+};
+
 export const CharactersPage = () => {
-  const [charactersData, setCharactersData] = useState([]);
+  const [charactersData, setCharactersData] = useState<Character[]>([]);
   const [loading, setLoading] = useState(true);
 
   const getCharacters = async () => {
@@ -22,6 +31,7 @@ export const CharactersPage = () => {
   };
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     document.title = "Marvel: Personagens";
     getCharacters();
   }, []);

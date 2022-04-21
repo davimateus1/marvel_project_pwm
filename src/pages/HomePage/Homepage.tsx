@@ -6,10 +6,11 @@ import { Button } from "../../components/Button";
 import { useEffect } from "react";
 
 export const HomePage = () => {
-
   useEffect(() => {
+    window.scrollTo(0, 0);
     document.title = "Marvel: Inicio";
-  })
+  });
+
   return (
     <Container>
       <TextContainer>

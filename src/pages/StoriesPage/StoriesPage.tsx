@@ -8,20 +8,30 @@ import { Fade } from "react-reveal";
 
 import { Loading } from "../../components/Loading";
 
+type Story = {
+  title: string;
+  type: string;
+  comics: { available: number };
+  creators: { available: number };
+  originalIssue: { name: string };
+};
+
 export const StoriesPage = () => {
-  const [storiesData, setStoriesData] = useState([]);
+  const [storiesData, setStoriesData] = useState<Story[]>([]);
   const [loading, setLoading] = useState(true);
 
   const getStories = async () => {
     const stories = await StoriesRequest();
 
     if (stories) {
+      console.log(stories);
       setStoriesData(stories);
       setLoading(false);
     }
   };
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     document.title = "Marvel: Histórias";
     getStories();
   }, []);
@@ -33,30 +43,30 @@ export const StoriesPage = () => {
         {loading ? (
           <Loading type="spinningBubbles" color="black" />
         ) : (
-          storiesData.map((storie: any, index: number): any => (
+          storiesData.map((story, index) => (
             <Fade left key={index}>
               <Tilt options={{ max: 8, speed: 800, scale: 1.01 }}>
                 <CharacterContainer>
-                  <Text>{storie.title}</Text>
+                  <Text>{story.title}</Text>
                   <InfosContainer>
-                    <p>Tipo: {storie.type}</p>
+                    <p>Tipo: {story.type}</p>
                     <p>
-                      Quadrinhos: {" "}
-                      {storie.comics.available === 0
+                      Quadrinhos:{" "}
+                      {story.comics.available === 0
                         ? "confidencial"
-                        : storie.comics.available}
+                        : story.comics.available}
                     </p>
                     <p>
-                      Criadores: {" "}
-                      {storie.creators.available === 0
+                      Criadores:{" "}
+                      {story.creators.available === 0
                         ? "confidencial"
-                        : storie.creators.available}
+                        : story.creators.available}
                     </p>
                     <p>
-                      Publicada originalmente por: {" "}
-                      {storie.comics.available === 0
+                      Publicada originalmente por:{" "}
+                      {!story.originalIssue.name
                         ? "confidencial"
-                        : storie.originalIssue.name}
+                        : story.originalIssue.name}
                     </p>
                   </InfosContainer>
                 </CharacterContainer>

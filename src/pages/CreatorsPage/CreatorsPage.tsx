@@ -8,8 +8,16 @@ import { Fade } from "react-reveal";
 
 import { Loading } from "../../components/Loading";
 
+type Creator = {
+  fullName: string;
+  comics: { available: number };
+  events: { available: number };
+  series: { available: number };
+  stories: { available: number };
+};
+
 export const CreatorsPage = () => {
-  const [creatorsData, setCreatorsData] = useState([]);
+  const [creatorsData, setCreatorsData] = useState<Creator[]>([]);
   const [loading, setLoading] = useState(true);
 
   const getCreators = async () => {
@@ -22,6 +30,7 @@ export const CreatorsPage = () => {
   };
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     document.title = "Marvel: Criadores";
     getCreators();
   }, []);

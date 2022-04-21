@@ -10,6 +10,16 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+
+  @media (max-width: 825px) {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: none;
+    background-color: #060d15;
+  }
 `;
 
 export const Title = styled.h1`
@@ -31,6 +41,28 @@ export const Title = styled.h1`
     background-color: #ec1d24;
     color: white;
     padding: 0.8rem;
+  }
+
+  @media (max-width: 825px) {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    font-size: 3rem;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(1, 1, 1, 0.5);
+    border: 1px solid #060d15;
+    -webkit-text-stroke-width: 0.03px;
+    -webkit-text-stroke-color: black;
+    span {
+      -webkit-text-stroke-width: 0.03px;
+      -webkit-text-stroke-color: white;
+      font-weight: 900;
+      background-color: transparent;
+      color: red;
+      padding: 0.8rem;
+    }
   }
 `;
 
@@ -54,6 +86,9 @@ export const Image = styled.img`
   width: 35%;
   filter: drop-shadow(5px 5px 5px #ec1d24);
   animation: ${effect} 5s linear infinite;
+  @media (max-width: 825px) {
+    display: none;
+  }
 `;
 
 export const Wrap = styled.div`

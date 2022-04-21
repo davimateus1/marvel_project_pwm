@@ -67,30 +67,9 @@ export const ButtonStyle = styled.button`
   }
 
   color: white;
-  transform: translateY(-50px);
 
   :hover::before,
   :focus::before {
     opacity: 1;
-  }
-
-  ::after {
-    content: "";
-    width: 30px;
-    height: 30px;
-    border-radius: 100%;
-    border: 6px solid white;
-    position: absolute;
-    z-index: -1;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: ${buttonEffect} 1.5s infinite;
-  }
-
-  :hover::after,
-  :focus::after {
-    animation: none;
-    display: none;
   }
 `;

@@ -16,7 +16,7 @@ export const Navbar = () => {
       <Fade left>
         <Links>
           <Link to="/options">
-            <li>Menu - Escolha o seu Destino</li>
+            <li>Menu</li>
           </Link>
         </Links>
       </Fade>

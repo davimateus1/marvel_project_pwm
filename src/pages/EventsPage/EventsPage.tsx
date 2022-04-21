@@ -8,8 +8,17 @@ import { Fade } from "react-reveal";
 
 import { Loading } from "../../components/Loading";
 
+type Event = {
+  image: string;
+  title: string;
+  characters: { available: number };
+  creators: { available: number };
+  series: { available: number };
+  stories: { available: number };
+};
+
 export const EventsPage = () => {
-  const [eventsData, setEventsData] = useState([]);
+  const [eventsData, setEventsData] = useState<Event[]>([]);
   const [loading, setLoading] = useState(true);
 
   const getEvents = async () => {
@@ -22,6 +31,7 @@ export const EventsPage = () => {
   };
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     document.title = "Marvel: Eventos";
     getEvents();
   }, []);

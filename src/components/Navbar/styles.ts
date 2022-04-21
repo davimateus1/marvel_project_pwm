@@ -14,6 +14,9 @@ export const Logo = styled.img`
   width: 7%;
   margin-left: 2rem;
   cursor: pointer;
+  @media (max-width: 825px) {
+    width: 25%;
+  }
 `;
 
 export const Links = styled.ul`

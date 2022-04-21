@@ -11,21 +11,19 @@ import { ErrorPage } from "./pages/ErrorPage";
 
 const App = () => {
   return (
-    <>
-      <Router>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/options" element={<OptionsPage />} />
-          <Route path="/characters" element={<CharactersPage />} />
-          <Route path="/comics" element={<ComicsPage />} />
-          <Route path="/series" element={<SeriesPage />} />
-          <Route path="/events" element={<EventsPage />} />
-          <Route path="/creators" element={<CreatorsPage />} />
-          <Route path="/stories" element={<StoriesPage />} />
-          <Route path="/*" element={<ErrorPage />} />
-        </Routes>
-      </Router>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/options" element={<OptionsPage />} />
+        <Route path="/characters" element={<CharactersPage />} />
+        <Route path="/comics" element={<ComicsPage />} />
+        <Route path="/series" element={<SeriesPage />} />
+        <Route path="/events" element={<EventsPage />} />
+        <Route path="/creators" element={<CreatorsPage />} />
+        <Route path="/stories" element={<StoriesPage />} />
+        <Route path="/*" element={<ErrorPage />} />
+      </Routes>
+    </Router>
   );
 };
 

@@ -11,6 +11,12 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 825px) {
+    height: auto;
+    background-image: none;
+    background-color: #060d15;
+  }
 `;
 
 export const CardsSpace = styled.div`
@@ -26,4 +32,9 @@ export const TitlePage = styled.h1`
   -webkit-text-stroke-color: white;
   font-size: 5rem;
   margin-top: 0;
+
+  @media (max-width: 825px) {
+    margin-top: 10px;
+    text-align: center;
+  }
 `;

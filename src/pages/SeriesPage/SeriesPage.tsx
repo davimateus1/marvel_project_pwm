@@ -8,8 +8,16 @@ import { Fade } from "react-reveal";
 
 import { Loading } from "../../components/Loading";
 
+type Serie = {
+  image: string;
+  title: string;
+  endYear: number;
+  creators: { available: number };
+  type: string;
+};
+
 export const SeriesPage = () => {
-  const [seriesData, setSeriesData] = useState([]);
+  const [seriesData, setSeriesData] = useState<Serie[]>([]);
   const [loading, setLoading] = useState(true);
 
   const getSeries = async () => {
@@ -22,6 +30,7 @@ export const SeriesPage = () => {
   };
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     document.title = "Marvel: Séries";
     getSeries();
   }, []);
@@ -46,9 +55,7 @@ export const SeriesPage = () => {
                       {serie.endYear === 2099 ? "Em andamento" : serie.endYear}
                     </p>
                     <p>Quantidade de criadores: {serie.creators.available}</p>
-                    <p>
-                      Tipo: {serie.type === "" ? "confidencial" : serie.type}
-                    </p>
+                    <p>Tipo: {!serie.type ? "confidencial" : serie.type}</p>
                   </InfosContainer>
                 </CharacterContainer>
               </Tilt>

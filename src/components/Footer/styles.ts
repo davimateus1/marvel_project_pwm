@@ -9,6 +9,10 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 825px) {
+    height: auto;
+  }
 `;
 
 export const Name = styled.h1`
@@ -21,6 +25,12 @@ export const PersonsContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 825px) {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    flex-direction: column;
+  }
 `;
 
 export const Person = styled.div`

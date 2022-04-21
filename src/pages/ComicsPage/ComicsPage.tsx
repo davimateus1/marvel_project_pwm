@@ -8,8 +8,16 @@ import { Fade } from "react-reveal";
 
 import { Loading } from "../../components/Loading";
 
+type Comic = {
+  image: string;
+  title: string;
+  stories: { available: number };
+  variants: { length: number };
+  pageCOUNT: number;
+};
+
 export const ComicsPage = () => {
-  const [comicsData, setComicsData] = useState([]);
+  const [comicsData, setComicsData] = useState<Comic[]>([]);
   const [loading, setLoading] = useState(true);
 
   const getComics = async () => {
@@ -22,6 +30,7 @@ export const ComicsPage = () => {
   };
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     document.title = "Marvel: Quadrinhos";
     getComics();
   }, []);

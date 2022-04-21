@@ -7,17 +7,17 @@ import { useEffect } from "react";
 
 export const ErrorPage = () => {
   useEffect(() => {
+    window.scrollTo(0, 0);
     document.title = "Marvel: Erro 404 :(";
   });
+
   return (
     <Container>
       <Image src={Manopla} alt="IronMan" />
       <TextContainer>
         <Tilt options={{ max: 8, speed: 800, scale: 1.03 }}>
           <Zoom top>
-            <Title>
-              Erro 404: Página não encontrada
-            </Title>
+            <Title>Erro 404: Página não encontrada</Title>
           </Zoom>
         </Tilt>
         <Button titleText="Voltar ao início" redirect="/" />
