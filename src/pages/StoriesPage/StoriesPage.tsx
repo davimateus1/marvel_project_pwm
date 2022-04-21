@@ -1,12 +1,14 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Footer } from "../../components/Footer";
 import { Navbar } from "../../components/Navbar";
-import { StoriesRequest } from "../../services";
+import { route6, StoriesRequest } from "../../services";
 import { CharacterContainer, Container, InfosContainer, Text } from "./styles";
 import Tilt from "react-tilt";
 import { Fade } from "react-reveal";
 
 import { Loading } from "../../components/Loading";
+import { Button } from "../../components/ButtonMore/styles";
+import axios from "axios";
 
 type Story = {
   title: string;
@@ -19,6 +21,7 @@ type Story = {
 export const StoriesPage = () => {
   const [storiesData, setStoriesData] = useState<Story[]>([]);
   const [loading, setLoading] = useState(true);
+  const [loadingButton, setLoadingButton] = useState(false);
 
   const getStories = async () => {
     const stories = await StoriesRequest();
@@ -35,6 +38,23 @@ export const StoriesPage = () => {
     document.title = "Marvel: Histórias";
     getStories();
   }, []);
+
+  const moreOptions = useCallback(async () => {
+    try {
+      setLoadingButton(true);
+      const offset = storiesData.length;
+      const response = await axios.get(route6, {
+        params: {
+          offset,
+        },
+      });
+
+      setStoriesData([...storiesData, ...response.data.data.results]);
+      setLoadingButton(false);
+    } catch (err) {
+      console.log(err);
+    }
+  }, [storiesData]);
 
   return (
     <>
@@ -73,6 +93,22 @@ export const StoriesPage = () => {
               </Tilt>
             </Fade>
           ))
+        )}
+        {loading ? (
+          ""
+        ) : (
+          <Button onClick={moreOptions}>
+            {loadingButton ? (
+              <Loading
+                type="spinningBubbles"
+                color="white"
+                width={30}
+                height={30}
+              />
+            ) : (
+              "Ver Mais"
+            )}
+          </Button>
         )}
       </Container>
       <Footer />

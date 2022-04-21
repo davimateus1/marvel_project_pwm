@@ -1,12 +1,14 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Footer } from "../../components/Footer";
 import { Navbar } from "../../components/Navbar";
-import { EventsRequest } from "../../services";
+import { EventsRequest, route4 } from "../../services";
 import { CharacterContainer, Container, InfosContainer, Text } from "./styles";
 import Tilt from "react-tilt";
 import { Fade } from "react-reveal";
 
 import { Loading } from "../../components/Loading";
+import { Button } from "../../components/ButtonMore/styles";
+import axios from "axios";
 
 type Event = {
   image: string;
@@ -20,6 +22,7 @@ type Event = {
 export const EventsPage = () => {
   const [eventsData, setEventsData] = useState<Event[]>([]);
   const [loading, setLoading] = useState(true);
+  const [loadingButton, setLoadingButton] = useState(false);
 
   const getEvents = async () => {
     const events = await EventsRequest();
@@ -29,6 +32,23 @@ export const EventsPage = () => {
       setLoading(false);
     }
   };
+
+  const moreOptions = useCallback(async () => {
+    try {
+      setLoadingButton(true);
+      const offset = eventsData.length;
+      const response = await axios.get(route4, {
+        params: {
+          offset,
+        },
+      });
+
+      setEventsData([...eventsData, ...response.data.data.results]);
+      setLoadingButton(false);
+    } catch (err) {
+      console.log("erro", err);
+    }
+  }, [eventsData]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -75,6 +95,22 @@ export const EventsPage = () => {
               </Tilt>
             </Fade>
           ))
+        )}
+        {loading ? (
+          ""
+        ) : (
+          <Button onClick={moreOptions}>
+            {loadingButton ? (
+              <Loading
+                type="spinningBubbles"
+                color="white"
+                width={30}
+                height={30}
+              />
+            ) : (
+              "Ver Mais"
+            )}
+          </Button>
         )}
       </Container>
       <Footer />
