@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { CharactersPage } from "./pages/CharactersPage";
-import { HomePage } from "./pages/Homepage";
+import { Homepage } from "./pages/Homepage";
 import { OptionsPage } from "./pages/OptionsPage";
 import { ComicsPage } from "./pages/ComicsPage";
 import { SeriesPage } from "./pages/SeriesPage";
@@ -13,7 +13,7 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<Homepage />} />
         <Route path="/options" element={<OptionsPage />} />
         <Route path="/characters" element={<CharactersPage />} />
         <Route path="/comics" element={<ComicsPage />} />
