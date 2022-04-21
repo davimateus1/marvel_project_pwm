@@ -10,7 +10,7 @@ const hash = md5(time + privateKey + publicKey);
 export const CharactersRequest = async () => {
   try {
     const response = await axios.get(
-      `https://gateway.marvel.com/v1/public/characters?ts=${time}&apikey=${publicKey}&hash=${hash}`
+      `http://gateway.marvel.com/v1/public/characters?ts=${time}&apikey=${publicKey}&hash=${hash}`
     );
     return response.data.data.results;
   } catch (err) {
@@ -21,7 +21,7 @@ export const CharactersRequest = async () => {
 export const ComicsRequest = async () => {
   try {
     const response = await axios.get(
-      `https://gateway.marvel.com/v1/public/comics?ts=${time}&apikey=${publicKey}&hash=${hash}`
+      `http://gateway.marvel.com/v1/public/comics?ts=${time}&apikey=${publicKey}&hash=${hash}`
     );
     return response.data.data.results;
   } catch (err) {
@@ -32,7 +32,7 @@ export const ComicsRequest = async () => {
 export const SeriesRequest = async () => {
   try {
     const response = await axios.get(
-      `https://gateway.marvel.com/v1/public/series?ts=${time}&apikey=${publicKey}&hash=${hash}`
+      `http://gateway.marvel.com/v1/public/series?ts=${time}&apikey=${publicKey}&hash=${hash}`
     );
     return response.data.data.results;
   } catch (err) {
@@ -43,7 +43,7 @@ export const SeriesRequest = async () => {
 export const EventsRequest = async () => {
   try {
     const response = await axios.get(
-      `https://gateway.marvel.com/v1/public/events?ts=${time}&apikey=${publicKey}&hash=${hash}`
+      `http://gateway.marvel.com/v1/public/events?ts=${time}&apikey=${publicKey}&hash=${hash}`
     );
     return response.data.data.results;
   } catch (err) {
@@ -54,7 +54,7 @@ export const EventsRequest = async () => {
 export const CreatorsRequest = async () => {
   try {
     const response = await axios.get(
-      `https://gateway.marvel.com/v1/public/creators?ts=${time}&apikey=${publicKey}&hash=${hash}`
+      `http://gateway.marvel.com/v1/public/creators?ts=${time}&apikey=${publicKey}&hash=${hash}`
     );
     return response.data.data.results;
   } catch (err) {
@@ -65,7 +65,7 @@ export const CreatorsRequest = async () => {
 export const StoriesRequest = async () => {
   try {
     const response = await axios.get(
-      `https://gateway.marvel.com/v1/public/stories?ts=${time}&apikey=${publicKey}&hash=${hash}`
+      `http://gateway.marvel.com/v1/public/stories?ts=${time}&apikey=${publicKey}&hash=${hash}`
     );
     return response.data.data.results;
   } catch (err) {
