@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 
 export const Wrap = styled.div`
   height: 100%;
@@ -8,19 +8,6 @@ export const Wrap = styled.div`
 
   a {
     text-decoration: none;
-  }
-`;
-
-const buttonEffect = keyframes`
-  0% {
-    width: 30px;
-    height: 30px;
-    opacity: 1;
-  }
-  100% {
-    width: 300px;
-    height: 300px;
-    opacity: 0;
   }
 `;
 

@@ -7,11 +7,13 @@ import { EventsPage } from "./pages/EventsPage";
 import { CreatorsPage } from "./pages/CreatorsPage";
 import { StoriesPage } from "./pages/StoriesPage";
 import { ErrorPage } from "./pages/ErrorPage";
+import { Home } from "./pages/Home";
 
 const App = () => {
   return (
     <Router>
       <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="/options" element={<OptionsPage />} />
         <Route path="/characters" element={<CharactersPage />} />
         <Route path="/comics" element={<ComicsPage />} />
