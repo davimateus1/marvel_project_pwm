@@ -31,7 +31,7 @@ export const CardContainer = styled.div<CardContainerProps>`
 `;
 
 export const Text = styled.h1<TextProps>`
-  -webkit-text-stroke-width: 0.03px;
+  -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: white;
   position: relative;
   border-radius: 10px;

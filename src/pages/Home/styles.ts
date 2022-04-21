@@ -53,10 +53,10 @@ export const Title = styled.h1`
     align-items: center;
     background-color: rgba(1, 1, 1, 0.5);
     border: 1px solid #060d15;
-    -webkit-text-stroke-width: 0.03px;
+    -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
     span {
-      -webkit-text-stroke-width: 0.03px;
+      -webkit-text-stroke-width: 1px;
       -webkit-text-stroke-color: white;
       font-weight: 900;
       background-color: transparent;

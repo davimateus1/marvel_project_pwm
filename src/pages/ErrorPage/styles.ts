@@ -22,7 +22,7 @@ export const Container = styled.div`
 export const Title = styled.h1`
   cursor: default;
   color: black;
-  -webkit-text-stroke-width: 0.03px;
+  -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: white;
   padding: 0.5rem;
   border-radius: 20px;

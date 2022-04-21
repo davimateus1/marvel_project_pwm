@@ -41,7 +41,7 @@ export const CharacterContainer = styled.div`
 `;
 
 export const Text = styled.h1`
-  -webkit-text-stroke-width: 0.03px;
+  -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: white;
   position: relative;
   border-radius: 10px;

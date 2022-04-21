@@ -28,8 +28,9 @@ export const CardsSpace = styled.div`
 `;
 
 export const TitlePage = styled.h1`
-  -webkit-text-stroke-width: 0.03px;
+  -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: white;
+  color: black;
   font-size: 5rem;
   margin-top: 0;
 
