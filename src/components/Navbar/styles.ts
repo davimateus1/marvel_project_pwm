@@ -14,7 +14,7 @@ export const Logo = styled.img`
   width: 7%;
   margin-left: 2rem;
   cursor: pointer;
-  @media (max-width: 825px) {
+  @media (max-width: 1024px) {
     width: 25%;
   }
 `;

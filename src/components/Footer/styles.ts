@@ -10,7 +10,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
 
-  @media (max-width: 825px) {
+  @media (max-width: 1024px) {
     height: auto;
   }
 `;
@@ -26,7 +26,7 @@ export const PersonsContainer = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media (max-width: 825px) {
+  @media (max-width: 1024px) {
     margin-top: 10px;
     margin-bottom: 10px;
     flex-direction: column;

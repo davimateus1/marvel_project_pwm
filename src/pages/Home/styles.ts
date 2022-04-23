@@ -11,7 +11,7 @@ export const Container = styled.div`
   justify-content: space-evenly;
   align-items: center;
 
-  @media (max-width: 825px) {
+  @media (max-width: 1024px) {
     display: flex;
     height: 100vh;
     justify-content: center;
@@ -43,7 +43,7 @@ export const Title = styled.h1`
     padding: 0.8rem;
   }
 
-  @media (max-width: 825px) {
+  @media (max-width: 1024px) {
     display: flex;
     flex-direction: column;
     width: 95%;
@@ -86,7 +86,7 @@ export const Image = styled.img`
   width: 35%;
   filter: drop-shadow(5px 5px 5px #ec1d24);
   animation: ${effect} 5s linear infinite;
-  @media (max-width: 825px) {
+  @media (max-width: 1024px) {
     display: none;
   }
 `;

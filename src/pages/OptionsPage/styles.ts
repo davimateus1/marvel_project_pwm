@@ -9,10 +9,9 @@ export const Container = styled.div`
   background-repeat: no-repeat;
   height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
 
-  @media (max-width: 825px) {
+  @media (max-width: 1024px) {
     height: auto;
     background-image: none;
     background-color: #060d15;
@@ -31,10 +30,10 @@ export const TitlePage = styled.h1`
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: white;
   color: black;
-  font-size: 5rem;
-  margin-top: 0;
+  font-size: 4.5rem;
+  margin-top: 5rem;
 
-  @media (max-width: 825px) {
+  @media (max-width: 1024px) {
     margin-top: 10px;
     text-align: center;
   }
