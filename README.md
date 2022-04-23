@@ -1,46 +1,123 @@
-# Getting Started with Create React App
+<h1 align="center">
+ <img alt="move.it" title="move.it" src="https://user-images.githubusercontent.com/66326378/164896001-b6c44ec6-8f76-4193-91c6-75e0d408a05b.png" height=100px  />
+  <br>
+  Projeto final: Programação Web e Mobile
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-deploy-do-projeto">Deploy do Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-como-executar">Como executar</a>
+</p>
 
-## Available Scripts
+<br>
 
-In the project directory, you can run:
+<h2>🖥️ Tela principal: </h2>
+<p align="center">
+  <img alt="Happy" src="https://user-images.githubusercontent.com/66326378/164896086-3affe06c-3ccb-46c9-a69a-fbbab79e97ef.png" width="100%">
+</p>
+<h2>🖥️ Tela de Menu: </h2>
+<p align="center">
+  <img alt="Happy" src="https://user-images.githubusercontent.com/66326378/164896106-a0765672-b134-48a0-8ce2-ce55b997ab3b.png" width="100%">
+</p>
+<h2>🖥️ Tela de Personagens: </h2>
+<p align="center">
+  <img alt="Happy" src="https://user-images.githubusercontent.com/66326378/164896159-d0af01a3-a52c-4fc6-8bc3-52dab8c8088f.png" width="100%">
+</p>
+<h2>🖥️ Tela de Histórias: </h2>
+<p align="center">
+  <img alt="Happy" src="https://user-images.githubusercontent.com/66326378/164896185-50dbe3ab-5f4b-46b8-b3cc-b6542dce9dbd.png" width="100%">
+</p>
+<h2>🖥️ Tela de Criadores: </h2>
+<p align="center">
+  <img alt="Happy" src="https://user-images.githubusercontent.com/66326378/164896223-1f0221d8-e88e-4b45-ac0f-549d9840b676.png" width="100%">
+</p>
+<h2>🖥️ Tela de Quadrinhos: </h2>
+<p align="center">
+  <img alt="Happy" src="https://user-images.githubusercontent.com/66326378/164896291-39dc508d-b27f-4e8b-b4d4-a01379fbe501.png" width="100%">
+</p>
+<h2>🖥️ Tela de Eventos: </h2>
+<p align="center">
+  <img alt="Happy" src="https://user-images.githubusercontent.com/66326378/164896359-4567a5f4-92e5-4555-8d21-9b3df0f974d6.png" width="100%">
+</p>
+<h2>🖥️ Tela de Séries: </h2>
+<p align="center">
+  <img alt="Happy" src="https://user-images.githubusercontent.com/66326378/164896399-70c4f6d0-513a-4a47-a5e4-888134212511.png" width="100%">
+</p>
+<h2>🖥️ Tela de Erro: </h2>
+<p align="center">
+  <img alt="Happy" src="https://user-images.githubusercontent.com/66326378/164896418-8bd89e16-41fe-4d92-a2a7-586b3cb4dffb.png" width="100%">
+</p>
+<h2>📱 Telas responsivas: </h2>
+<p float="left" align="center">
+  <img src="https://user-images.githubusercontent.com/66326378/164896475-3e2015e3-006c-4f3d-8dc8-f372f56d5949.png" width="18%" />
+  <img src="https://user-images.githubusercontent.com/66326378/164896484-65ff7032-e570-48c9-a0e5-31d6f4f6211c.png" width="18%" /> 
+  <img src="https://user-images.githubusercontent.com/66326378/164896503-4c614baa-74d8-4c96-8288-8373fccfc671.png" width="18%" />
+  <img src="https://user-images.githubusercontent.com/66326378/164896525-196e2fa3-983a-47d0-813f-0c2faecd7963.png" width="18%" />
+  <img src="https://user-images.githubusercontent.com/66326378/164896540-633a624f-ec84-467d-a7ae-1ee05d39c65e.png" width="18%" />
+  <img src="https://user-images.githubusercontent.com/66326378/164896558-3a7ff2e6-07c9-46da-93d5-1d6e6c7aa330.png" width="18%" />
+  <img src="https://user-images.githubusercontent.com/66326378/164896578-b149af41-8f4e-47db-a6c4-b711d658edc1.png" width="18%" /> 
+  <img src="https://user-images.githubusercontent.com/66326378/164896608-97e06d5c-e568-4221-b2f1-c857207fcc25.png" width="18%" />
+  <img src="https://user-images.githubusercontent.com/66326378/164896620-2767845b-99f1-4ae3-aa81-3635614fe822.png" width="18%" />
+</p>
 
-### `npm start`
+<br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## ✨ Tecnologias
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-### `npm test`
+- [ReactJS](https://reactjs.org)
+- [React Icons](https://react-icons.github.io/react-icons/search)
+- [React Router](https://reactrouter.com)
+- [React Reveal](https://www.react-reveal.com)
+- [React Loading](https://www.npmjs.com/package/react-loading)
+- [React Tilt](https://www.npmjs.com/package/react-tilt)
+- [Axios](https://axios-http.com/docs/intro)
+- [HTML5](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+- [Styled Components](https://styled-components.com)
+- [Marvel API](https://developer.marvel.com)
+- [Heroku](https://id.heroku.com/login)
+- [md5](https://www.npmjs.com/package/md5)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<br>
 
-### `npm run build`
+## 💻 Projeto
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<p align="center">
+Esse projeto consiste em uma aplicação para mostrar os personagens, criadores, séries, quadrinhos e etc da Marvel, informações e curiosidades importantes sobre cada um, cada uma dessas áreas tem a sua prória rota e cada personagem tem as suas informações. Vale ressaltar também que o projeto é completamente responsivo (se adapta a quaisquer dispositivos), esse projeto foi feito para a cadeira de programação web e mobile da faculdade.
+</p>
+ 
+<br> 
+ 
+## 🚀 Deploy do Projeto
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Você pode ver o funcionamento através [desse link](http://marvel-pwm.herokuapp.com).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<br>
 
-### `npm run eject`
+## 🚀 Como executar
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Clone o repositório
+- Vá ao site da [Marvel](https://developer.marvel.com), crie sua conta e pegue suas chaves (pública e privada)
+- Instale o [NPM](https://www.npmjs.com)
+- Instale as dependências com `npm install` no terminal
+- Inicie o projeto com `npm start` e após isso abra o `localhost:3000` no seu navegador
+- Fique a vontade para explorar e testar as funcionalidades do projeto
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### 👨‍👦‍👦 COLABORADORES
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### Nome: Davi Mateus Gomes de Almeida
+- GitHub: [Davi Mateus](https://github.com/davimateus1)
 
-## Learn More
+#### Nome: João Vitor Machado
+- GitHub: [João Vitor](https://github.com/joovitor12)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### Nome: Ronny Lima Ribeiro da Silva
+- GitHub: [Ronny Lima](https://github.com/ronnylrsd)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
+
