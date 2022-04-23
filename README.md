@@ -74,6 +74,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [React Reveal](https://www.react-reveal.com)
 - [React Loading](https://www.npmjs.com/package/react-loading)
 - [React Tilt](https://www.npmjs.com/package/react-tilt)
+- [TypeScript](https://www.typescriptlang.org)
 - [Axios](https://axios-http.com/docs/intro)
 - [HTML5](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 - [Styled Components](https://styled-components.com)
