@@ -45,7 +45,7 @@ export const CreatorsPage = () => {
       setCreatorsData([...creatorsData, ...response.data.data.results]);
       setLoadingButton(false);
     } catch (err) {
-      console.log("erro", err);
+      console.log(err);
     }
   }, [creatorsData]);
 

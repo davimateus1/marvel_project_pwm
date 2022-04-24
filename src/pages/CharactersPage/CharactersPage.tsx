@@ -46,7 +46,7 @@ export const CharactersPage = () => {
       setCharactersData([...charactersData, ...response.data.data.results]);
       setLoadingButton(false);
     } catch (err) {
-      console.log("erro", err);
+      console.log(err);
     }
   }, [charactersData]);
 

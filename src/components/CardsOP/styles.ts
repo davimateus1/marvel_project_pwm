@@ -19,7 +19,7 @@ export const CardContainer = styled.div<CardContainerProps>`
   justify-content: center;
   align-items: center;
   background-color: ${(props) => (props.color ? props.color : "")};
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: ${(props) => (props.color ? `5px solid ${props.color}` : "")};
   flex-direction: column;
   -webkit-box-shadow: inset 1px -50px 40px 5px #000000;
   box-shadow: inset 1px -50px 40px 5px #000000;

@@ -7,7 +7,9 @@ export const Container = styled.div`
   background-size: cover;
   flex-direction: column;
   background-repeat: no-repeat;
-  height: 100vh;
+  justify-content: center;
+  min-height: 100vh;
+  height: auto;
   display: flex;
   align-items: center;
 
@@ -30,8 +32,7 @@ export const TitlePage = styled.h1`
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: white;
   color: black;
-  font-size: 4.5rem;
-  margin-top: 5rem;
+  font-size: 5rem;
 
   @media (max-width: 1024px) {
     margin-top: 10px;

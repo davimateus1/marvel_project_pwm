@@ -27,7 +27,6 @@ export const StoriesPage = () => {
     const stories = await StoriesRequest();
 
     if (stories) {
-      console.log(stories);
       setStoriesData(stories);
       setLoading(false);
     }

@@ -45,7 +45,7 @@ export const ComicsPage = () => {
       setComicsData([...comicsData, ...response.data.data.results]);
       setLoadingButton(false);
     } catch (err) {
-      console.log("erro", err);
+      console.log(err);
     }
   }, [comicsData]);
 
