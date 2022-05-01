@@ -4,10 +4,60 @@ type CharacterContainerProps = {
   image: string;
 };
 
+export const InputContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 5vh;
+  background-color: rgba(90, 180, 7, 0.8);
+
+  label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #121212;
+    border-radius: 20px;
+    padding: 0.5rem;
+    width: 15rem;
+  }
+
+  svg {
+    color: #ec1d24;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  input {
+    font-family: Bangers, sans-serif;
+    background-color: #ec1d24;
+    border: none;
+    color: black;
+    padding: 0.4rem;
+    border-radius: 10px;
+    margin: 0 10px 0 10px;
+    transition: all 0.5s;
+    :focus {
+      outline: none;
+    }
+    ::placeholder {
+      color: black;
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    height: auto;
+    min-height: 7vh;
+    label {
+      margin: 0.5rem;
+    }
+  }
+`;
+
 export const Container = styled.div`
   font-family: Bangers, sans-serif;
   width: 100vw;
-  height: 78vh;
+  height: 73vh;
   overflow: hidden;
   display: flex;
   justify-content: center;

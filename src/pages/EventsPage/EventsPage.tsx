@@ -24,6 +24,12 @@ export const EventsPage = () => {
   const [loading, setLoading] = useState(true);
   const [loadingButton, setLoadingButton] = useState(false);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    document.title = "Marvel: Eventos";
+    getEvents();
+  }, []);
+
   const getEvents = async () => {
     const events = await EventsRequest();
 
@@ -49,12 +55,6 @@ export const EventsPage = () => {
       console.log(err);
     }
   }, [eventsData]);
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    document.title = "Marvel: Eventos";
-    getEvents();
-  }, []);
 
   return (
     <>

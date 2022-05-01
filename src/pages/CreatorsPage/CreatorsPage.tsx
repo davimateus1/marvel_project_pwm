@@ -23,6 +23,12 @@ export const CreatorsPage = () => {
   const [loading, setLoading] = useState(true);
   const [loadingButton, setLoadingButton] = useState(false);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    document.title = "Marvel: Criadores";
+    getCreators();
+  }, []);
+
   const getCreators = async () => {
     const creators = await CreatorsRequest();
 
@@ -48,12 +54,6 @@ export const CreatorsPage = () => {
       console.log(err);
     }
   }, [creatorsData]);
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    document.title = "Marvel: Criadores";
-    getCreators();
-  }, []);
 
   return (
     <>

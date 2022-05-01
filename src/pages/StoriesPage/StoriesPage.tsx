@@ -23,6 +23,12 @@ export const StoriesPage = () => {
   const [loading, setLoading] = useState(true);
   const [loadingButton, setLoadingButton] = useState(false);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    document.title = "Marvel: Histórias";
+    getStories();
+  }, []);
+  
   const getStories = async () => {
     const stories = await StoriesRequest();
 
@@ -31,12 +37,6 @@ export const StoriesPage = () => {
       setLoading(false);
     }
   };
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    document.title = "Marvel: Histórias";
-    getStories();
-  }, []);
 
   const moreOptions = useCallback(async () => {
     try {

@@ -23,6 +23,12 @@ export const SeriesPage = () => {
   const [loading, setLoading] = useState(true);
   const [loadingButton, setLoadingButton] = useState(false);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    document.title = "Marvel: Séries";
+    getSeries();
+  }, []);
+  
   const getSeries = async () => {
     const series = await SeriesRequest();
 
@@ -48,12 +54,6 @@ export const SeriesPage = () => {
       console.log(err);
     }
   }, [seriesData]);
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    document.title = "Marvel: Séries";
-    getSeries();
-  }, []);
 
   return (
     <>

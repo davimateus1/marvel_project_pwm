@@ -23,6 +23,12 @@ export const ComicsPage = () => {
   const [loading, setLoading] = useState(true);
   const [loadingButton, setLoadingButton] = useState(false);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    document.title = "Marvel: Quadrinhos";
+    getComics();
+  }, []);
+
   const getComics = async () => {
     const comics = await ComicsRequest();
 
@@ -48,12 +54,6 @@ export const ComicsPage = () => {
       console.log(err);
     }
   }, [comicsData]);
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    document.title = "Marvel: Quadrinhos";
-    getComics();
-  }, []);
 
   return (
     <>
