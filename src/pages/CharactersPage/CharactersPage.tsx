@@ -6,16 +6,14 @@ import {
   CharacterContainer,
   Container,
   InfosContainer,
-  InputContainer,
   Text,
 } from "./styles";
 import Tilt from "react-tilt";
-import { Fade, Zoom } from "react-reveal";
+import { Fade } from "react-reveal";
 
 import { Loading } from "../../components/Loading";
 import axios from "axios";
 import { Button } from "../../components/ButtonMore/styles";
-import { FaSearch, FaRobot } from "react-icons/fa";
 
 type Character = {
   image: string;
@@ -30,9 +28,6 @@ export const CharactersPage = () => {
   const [charactersData, setCharactersData] = useState<Character[]>([]);
   const [loading, setLoading] = useState(true);
   const [loadingButton, setLoadingButton] = useState(false);
-  const [loadingSearch, setLoadingSearch] = useState(false);
-  const [error, setError] = useState(false);
-  const [search, setSearch] = useState("");
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -66,66 +61,9 @@ export const CharactersPage = () => {
     }
   }, [charactersData]);
 
-  const searchCharacter = useCallback(async () => {
-    try {
-      setLoadingSearch(true);
-      const response = await axios.get(route1, {
-        params: {
-          name: search,
-        },
-      });
-      setCharactersData([...response.data.data.results, ...charactersData]);
-      setLoadingSearch(false);
-      setSearch("");
-    } catch (err) {
-      console.log(err);
-    }
-  }, [search, charactersData]);
-
-  const onClick = () => {
-    if (search.trim() === "") {
-      return setError(true);
-    } else {
-      setError(false);
-      searchCharacter();
-    }
-  };
-
   return (
     <>
       <Navbar />
-      <InputContainer>
-        {loading ? (
-          <Loading
-            type="spinningBubbles"
-            color="black"
-            width={30}
-            height={30}
-          />
-        ) : (
-          <Zoom>
-            <label>
-              <FaRobot />
-              <input
-                type="search"
-                placeholder={error ? "Preencha o campo!" : "Nome do personagem"}
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
-              />
-              {loadingSearch ? (
-                <Loading
-                  type="spinningBubbles"
-                  color="white"
-                  width={20}
-                  height={20}
-                />
-              ) : (
-                <FaSearch onClick={onClick} />
-              )}
-            </label>
-          </Zoom>
-        )}
-      </InputContainer>
       <Container>
         {loading ? (
           <Loading type="spinningBubbles" color="black" />
