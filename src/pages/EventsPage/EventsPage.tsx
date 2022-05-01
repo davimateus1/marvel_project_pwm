@@ -52,7 +52,7 @@ export const EventsPage = () => {
       setEventsData([...eventsData, ...response.data.data.results]);
       setLoadingButton(false);
     } catch (err) {
-      console.log(err);
+      console.log("erro", err);
     }
   }, [eventsData]);
 
