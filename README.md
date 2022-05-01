@@ -23,7 +23,7 @@
 </p>
 <h2>🖥️ Tela de Personagens: </h2>
 <p align="center">
-  <img alt="Happy" src="https://user-images.githubusercontent.com/66326378/164896159-d0af01a3-a52c-4fc6-8bc3-52dab8c8088f.png" width="100%">
+  <img alt="Happy" src="https://user-images.githubusercontent.com/66326378/166129294-38f9608f-5baa-49d6-9d63-f096a78f7fd7.png" width="100%">
 </p>
 <h2>🖥️ Tela de Histórias: </h2>
 <p align="center">
@@ -53,7 +53,7 @@
 <p float="left" align="center">
   <img src="https://user-images.githubusercontent.com/66326378/164896475-3e2015e3-006c-4f3d-8dc8-f372f56d5949.png" width="18%" />
   <img src="https://user-images.githubusercontent.com/66326378/164896484-65ff7032-e570-48c9-a0e5-31d6f4f6211c.png" width="18%" /> 
-  <img src="https://user-images.githubusercontent.com/66326378/164896503-4c614baa-74d8-4c96-8288-8373fccfc671.png" width="18%" />
+  <img src="https://user-images.githubusercontent.com/66326378/166129303-2614981e-c421-447f-a755-fc733e0b6ab0.png" width="18%" />
   <img src="https://user-images.githubusercontent.com/66326378/164896525-196e2fa3-983a-47d0-813f-0c2faecd7963.png" width="18%" />
   <img src="https://user-images.githubusercontent.com/66326378/164896540-633a624f-ec84-467d-a7ae-1ee05d39c65e.png" width="18%" />
   <img src="https://user-images.githubusercontent.com/66326378/164896558-3a7ff2e6-07c9-46da-93d5-1d6e6c7aa330.png" width="18%" />
